@@ -21,7 +21,7 @@ def get_eigenpairs(x, C, poly_count, node_count):
     eigenvalues, eigenvectors = np.linalg.eigh(A_matrix)
     values = legnorm(x)
 
-    V1 = values[:, np.newaxis, np.newaxis, :] 
+    V1 = values[:, np.newaxis, np.newaxis, :]
     V2 = values[np.newaxis, :, :, np.newaxis]
     V = V1 * V2
     V = np.reshape(V, (len(V)**2, len(x), len(x)))
